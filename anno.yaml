@@ -3,7 +3,7 @@ apiVersion: v1
 metadata: 
   name: annotationpod
   annotations:
-    Email: hammadd2@yahoo.com
+    Email: hamadali@gmail.com
     Age: 44 years
 spec:
   containers:
