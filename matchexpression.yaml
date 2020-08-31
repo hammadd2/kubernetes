@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: express
+spec:
+  replicas: 3
+  selector:
+    matchExpressions:
+    - key: app
+      operator: In
+# operator: notin
+# doesnotin
+      values: 
+      - myapp
+      - myapp123
+      - myappxyz
+    - key: apps
+      operation: In
+      values: 
+      - java
+
+
+
+#    matchLabels:
+#      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80 
+

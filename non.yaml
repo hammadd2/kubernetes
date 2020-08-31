@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mohsan
+spec:
+  containers:
+  - image: mohsan87/htmlserverimage
+    name: container1
+    ports:
+    - containerPort: 80 

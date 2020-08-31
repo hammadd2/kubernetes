@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: ali
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aliapp
+  template:
+    metadata:
+      labels:
+        app: aliapp
+    spec:
+      containers:
+      - name: ali
+        image: hammadd2/static-2
+        ports:
+        - containerPort: 80

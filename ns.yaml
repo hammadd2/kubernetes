@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mypod
+  namespace: my-personal-ns 
+spec:
+  containers:
+  - name: container1
+    image: aamirpinger/helloworld
+
+
+  
+

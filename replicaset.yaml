@@ -1,0 +1,19 @@
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  name: hammad
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rshammad
+  template:
+    metadata:
+      labels:
+        app: rshammad
+    spec:	
+      containers:
+      - name: rscontainer
+        image: nginx
+        ports:
+        - containerPort: 80

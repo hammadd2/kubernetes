@@ -1,0 +1,19 @@
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+name: repiali
+spec:
+replicas: 4     
+selector:
+matchLabels: 
+app:myapp
+template:
+metadata:
+labels:
+app:myapp
+spec:
+containers:
+name: repaliex
+image: nginx
+ports: 
+containerPort: 80

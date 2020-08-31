@@ -1,0 +1,14 @@
+kind : Pod
+apiVersion: v1
+metadata:
+  name: pro
+  labels:
+    env: test
+    class: CNC
+    student: hammad
+spec:
+  containers:
+  - name: hammad
+    image: hammadd2/static-2
+    ports: 
+    - containerPort: 80  

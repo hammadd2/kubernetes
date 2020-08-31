@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: bbc
+  annotations:
+    host: Hammad Ali
+    createdby : M. Sajeel
+    class: Top Class Annotation
+spec:
+  containers:  
+  - name: jadugar
+    image: nginx
+    ports:
+    - containerPort: 80   

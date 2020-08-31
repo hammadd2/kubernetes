@@ -1,0 +1,15 @@
+kind: Pod	
+apiVersion: v1
+metadata:
+  name: readiness-wrong
+spec:
+  containers:
+  - name: readiness
+    image: aamirpinger/helloworld
+    ports:
+    - containerPort: 80
+    readinessProbe:
+      httpGet:
+        port: 60
+        path: /
+

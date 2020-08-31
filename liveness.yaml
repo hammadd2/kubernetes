@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: livenesspod
+spec:
+  containers:
+    - image: aamirpinger/hi
+      name: myapp
+      ports:
+        - containerPort: 80 
+      livenessProbe:
+        tcpSocket:
+          port: 80

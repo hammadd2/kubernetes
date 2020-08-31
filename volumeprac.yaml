@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: practice-volume
+spec:
+  volumes:
+    - name: prac-vol  
+      emptyDir: {}
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+      - containerPort: 80
+      volumeMounts:
+      - name: prac-vol
+        mountPath: /nginx
+      imagePullPolicy: IfNotPresent
+
