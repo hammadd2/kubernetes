@@ -4,7 +4,7 @@ metadata:
   name: kkj
   namespace : family
   annotations:
-    host: hammad ali
+    host: hammad ali mir
 spec:
   containers:
   - image: aamirpinger/helloworld:latest
